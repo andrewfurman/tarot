@@ -1,0 +1,120 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head profile="http://www.w3.org/2005/10/profile">
+
+
+<html>
+<!-- head -->
+<!--  Tarot
+      Date:  November 4, 2011 
+-->
+
+<!-- title -->
+<title>Tarot: Are You the World's Next Miss Cleo?</title>
+
+
+<!-- META tags -->
+<meta name="keywords" content="Visionize">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<link rel="icon" 
+      type="site_media/image/png" 
+      href="site_media/images/favicon.png" />
+
+<link href="site_media/style.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+
+
+
+<body>
+
+
+
+
+<div id="header">
+	
+
+	<img id="logo" src="site_media/images/logo.png"></img>
+	
+
+	<div id="navigation">
+	
+		<ul>
+		
+			<li><a href="/predictions">Feed</a></li>
+	
+			<li><a href="/users">Friends</a></li>
+		
+			<li><a href="/users/3">My Account</a></li>
+	
+			<li><a href="">Sign Out</a></li>
+	
+		</ul>
+	
+
+	</div>
+
+
+</div>
+
+
+
+
+
+
+<div id="leftNav">
+
+	<div id ="welcome">
+	
+
+	
+	
+
+
+	</div>
+
+	<div id="myFeed">
+	
+		<link href="site_media/style.css" rel="stylesheet" type="text/css"/>
+		<h1>Name: {{ userobject.username }}</h1>
+		<h3>Predictions:</h3>
+		<h3>This person made {{userobject.prediction_set.count}} predictions.</h3>
+		<h3>Points {{points}}</h3>
+		<h3>{{userobject.username}} has made these predictions:<h3>
+		<ul>
+		{% for prediction in userobject.prediction_set.all %}
+		    <li><a href="/predictions/{{ prediction.id }}/">{{ prediction.prediction_text }}</a></li>
+		{% endfor %}
+		</ul>
+
+
+	</div>
+
+
+
+
+
+
+</div>
+
+
+
+<div id="rightNav">
+
+</div>
+
+<div id="footer">
+<p> &copy; 2011 powerRagers </p>
+
+</div>
+</body>
+
+
+
+</html>

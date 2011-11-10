@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head profile="http://www.w3.org/2005/10/profile">
+
+
+<html>
+<!-- head -->
+<!--  Tarot
+      Date:  November 4, 2011 
+-->
+
+<!-- title -->
+<title>Tarot: Are You the World's Next Miss Cleo?</title>
+
+
+<!-- META tags -->
+<meta name="keywords" content="Visionize">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<link rel="icon" 
+      type="site_media/image/png" 
+      href="site_media/images/favicon.png" />
+
+<link href="site_media/style.css" rel="stylesheet" type="text/css"/>
+
+</head>
+
+
+
+
+<body>
+
+
+
+
+<div id="header">
+	
+
+	<img id="logo" src="site_media/images/logo.png"></img>
+	
+
+	<div id="navigation">
+	
+		<ul>
+		
+			<li><a href="/predictions">Feed</a></li>
+	
+			<li><a href="/users">Friends</a></li>
+		
+			<li><a href="/users/3">My Account</a></li>
+	
+			<li><a href="">Sign Out</a></li>
+	
+		</ul>
+	
+
+	</div>
+
+
+</div>
+
+
+
+
+
+
+<div id="leftNav">
+
+	<div id ="welcome">
+	
+
+	
+		<img id="profilepic" src="site_media/images/profilepic.png"></img>
+		<p>Welcome back, Rebecca! 
+		</br>
+		It looks like several of your friends have 
+	made more predictions. 
+		Don't forget to rate them and make some 
+	
+		predictions of your own. Work your your way up the prediction ladder 
+	
+		and earn more badges!</p>
+
+
+	</div>
+
+
+
+
+	<div id="myUpdate">
+	
+		<h3>What do you predict next?</h3>
+	
+			<p>powerRagers will win the Facebook Hackathon!</p>
+
+	</div>
+
+
+
+	<div id="myFeed">
+
+			
+		<h3>Mini-Feed</h3>
+	
+			{% if latest_prediction_list %}
+			    <ul>
+			    {% for prediction in latest_prediction_list %}
+			        <li><a href="/predictions/{{ prediction.id }}/">{{ prediction.prediction_text }}</a></li>
+			    {% endfor %}
+			    </ul>
+			{% else %}
+			    <p>No predictions are available.</p>
+			{% endif %}
+
+
+	</div>
+
+
+
+
+
+
+</div>
+
+
+
+<div id="rightNav">
+
+
+	<div id ="myBadges">
+
+		<h3>Status: Fortune Cookie</h3>
+
+	
+		<img id="welcomebadge" src="site_media/images/fcbadge.png"></img>
+	
+
+		<p>5 pts.</p>
+
+		Collect them all:
+		</br>
+		
+
+		<ul class="thumb">
+			<li><img src="site_media/images/fcbadge.png" alt="Fortune Cookie Badge" /></a></li>
+			<li><img src="site_media/images/mebadge.png" alt="Magic Eight Badge" /></a></li>
+			<li><img src="site_media/images/ftbadge.png" alt="Fortune Teller Badge" /></a></li>
+			<li><img src="site_media/images/cbbadge.png" alt="Crystal Ball Badge" /></a></li>
+			<li><img src="site_media/images/wsbadge.png" alt="Wizard Sorcerer Badge" /></a></li>
+			<li><img src="site_media/images/tcbadge.png" alt="Tarot Card Badge" /></a></li>
+		</ul>
+
+
+
+	</div>
+
+
+
+
+	<div id ="pendingRatings">
+	
+		<h3>Pending Ratings</h3>
+		<ul type ="circle">
+			<li>The world ended on 10/31/11.</li>
+			<li>It was snowing in Pittsburgh on 10/28/11</li>
+			<li>The Steelers won the Super Bowl in 2011. </li>
+
+		</ul>
+
+
+	</div>
+
+
+
+
+
+
+	
+	<div id ="yourPredictions">
+	
+		<h3>My Predictions</h3>
+		<ul type ="circle">
+			<li>powerRagers will win the Facebook Hackathon!</li>
+			<li> I will gain 10 pounds in one month.</li>
+			<li> It will start snowing in Pittsburgh next week.</li>
+
+		</ul>
+
+
+	</div>
+
+
+
+</div>
+
+<div id="footer">
+<p> &copy; 2011 powerRagers </p>
+
+</div>
+</body>
+
+
+
+</html>
